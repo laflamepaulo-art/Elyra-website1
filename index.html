@@ -48,7 +48,7 @@
         }
         
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(rgba(44,33,24,0.65), rgba(44,33,24,0.75)), 
                         url('https://picsum.photos/id/1015/1920/1080') center/cover;
             display: flex;
@@ -134,10 +134,59 @@
     </style>
 </head>
 <body>
-    <!-- Same content as before -->
     <header>
         <a href="#" class="logo">Elyra</a>
         <nav>
             <a href="#services">Services</a>
             <a href="#vision">Vision</a>
-            <
+            <a href="#">Join Waitlist</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elyra</h1>
+            <p class="slogan">Creative Paradise</p>
+            <p style="font-size: 1.4rem; margin-bottom: 2rem;">Where lens meets lyre.<br>Raw ideas become resonant stories.</p>
+            <button onclick="alert('Welcome to Elyra — Creative Paradise! 🚀\n\nJoin the waitlist coming soon.')" class="cta-button">Enter Your Paradise</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem;">Your Creative Sanctuary</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">AI-powered services for camera work, music production, photography, Premiere Pro editing, and social media storytelling.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>📸 Camera & Photography</h3>
+                <p>Professional capture, RAW processing, intelligent organization, and AI enhancements.</p>
+            </div>
+            <div class="card">
+                <h3>🎵 Music Production</h3>
+                <p>From-scratch composition, stem separation, beat matching, and original sound design.</p>
+            </div>
+            <div class="card">
+                <h3>🎬 Premiere Pro Editing</h3>
+                <p>Seamless video editing with AI-assisted cuts, transitions, color grading, and storytelling.</p>
+            </div>
+            <div class="card">
+                <h3>📱 Social Media Mastery</h3>
+                <p>Repurpose content, generate captions, optimize formats, and boost engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="vision">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem;">Our Vision</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+            <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
+            <p style="margin-top: 2rem;">Elyra is the essential creative companion that fuses camera work, music production, photography, video editing (including Premiere Pro), and social media storytelling. Powered by AI, we eliminate tedious struggles, save precious time, and augment human craft so you can focus on bringing the paradise of your imagination to life.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
+        <p style="margin-top: 1rem;">Building the future of authentic storytelling.</p>
+    </footer>
+</body>
+</html>
