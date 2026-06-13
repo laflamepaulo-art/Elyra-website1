@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elyra — Creative Paradise</title>
+    <style>
+        :root {
+            --indigo: #1E2A5E;
+            --teal: #00E5C0;
+            --amber: #FFB84D;
+            --dark: #0F172A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--dark);
+            color: #E2E8F0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(rgba(30,42,94,0.95), rgba(15,23,42,0.95));
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--teal);
+            text-decoration: none;
+        }
+        nav a {
+            color: #E2E8F0;
+            margin-left: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(30,42,94,0.7), rgba(15,23,42,0.8)), url('https://picsum.photos/id/1015/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .hero .slogan {
+            font-size: 2.2rem;
+            color: var(--amber);
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            background: var(--teal);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            background: var(--amber);
+            transform: scale(1.05);
+        }
+        section {
+            padding: 5rem 5%;
+        }
+        .services {
+            background: #1E2937;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .card {
+            background: #334155;
+            padding: 2rem;
+            border-radius: 16px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .vision {
+            background: linear-gradient(135deg, var(--indigo), #0F172A);
+        }
+        footer {
+            background: #0A1428;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Elyra</a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#vision">Vision</a>
+            <a href="#">Join Waitlist</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elyra</h1>
+            <p class="slogan">Creative Paradise</p>
+            <p style="font-size: 1.4rem; margin-bottom: 2rem;">Where lens meets lyre.<br>Raw ideas become resonant stories.</p>
+            <button onclick="alert('Welcome to Elyra — Creative Paradise! 🚀\n\nJoin the waitlist coming soon.')" class="cta-button">Enter Your Paradise</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem;">Your Creative Sanctuary</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">AI-powered services for camera work, music production, photography, Premiere Pro editing, and social media storytelling.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>📸 Camera & Photography</h3>
+                <p>Professional capture, RAW processing, intelligent organization, and AI enhancements.</p>
+            </div>
+            <div class="card">
+                <h3>🎵 Music Production</h3>
+                <p>From-scratch composition, stem separation, beat matching, and original sound design.</p>
+            </div>
+            <div class="card">
+                <h3>🎬 Premiere Pro Editing</h3>
+                <p>Seamless video editing with AI-assisted cuts, transitions, color grading, and storytelling.</p>
+            </div>
+            <div class="card">
+                <h3>📱 Social Media Mastery</h3>
+                <p>Repurpose content, generate captions, optimize formats, and boost engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="vision">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem;">Our Vision</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+            <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
+            <p style="margin-top: 2rem;">Elyra is the essential creative companion that fuses camera work, music production, photography, video editing (including Premiere Pro), and social media storytelling. Powered by AI, we eliminate tedious struggles, save precious time, and augment human craft so you can focus on bringing the paradise of your imagination to life. Barriers between lens and beat dissolve as original art reaches audiences faster, deeper, and more authentically than ever before.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
+        <p style="margin-top: 1rem;">Building the future of authentic storytelling.</p>
+    </footer>
+</body>
+          </html>
+          Add Elyra website
