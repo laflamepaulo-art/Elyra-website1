@@ -6,11 +6,11 @@
     <title>Elyra — Creative Paradise</title>
     <style>
         :root {
-            --dark-brown: #2C1F16;     /* Main dark background */
-            --choco: #3C2F2F;          /* Cards & sections */
-            --cream: #F5EDE4;          /* Light text */
-            --gold: #E8B923;           /* Warm accent */
-            --teal: #00C9A8;           /* Creative accent */
+            --dark-brown: #2C2118;     
+            --choco: #3F2E24;          
+            --cream: #F8F1E9;          
+            --gold: #E8B923;           
+            --teal: #00C9A8;           
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,7 +23,7 @@
         }
         
         header {
-            background: linear-gradient(rgba(44,31,22,0.95), rgba(28,20,15,0.95));
+            background: linear-gradient(rgba(44,33,24,0.95), rgba(44,33,24,0.95));
             padding: 1rem 5%;
             position: sticky;
             top: 0;
@@ -34,7 +34,7 @@
         }
         
         .logo {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--gold);
             text-decoration: none;
@@ -49,7 +49,7 @@
         
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(44,31,22,0.75), rgba(28,20,15,0.85)), 
+            background: linear-gradient(rgba(44,33,24,0.65), rgba(44,33,24,0.75)), 
                         url('https://picsum.photos/id/1015/1920/1080') center/cover;
             display: flex;
             align-items: center;
@@ -64,20 +64,80 @@
         }
         
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 4.8rem;
             margin-bottom: 1rem;
             color: white;
         }
         
         .hero .slogan {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             color: var(--gold);
             margin-bottom: 2rem;
         }
         
         .cta-button {
             background: var(--teal);
-            color: var(--dark-brown);
-            padding: 1rem 2.5rem;
-            font-size: 1.2rem;
-            border 
+            color: #1C140F;
+            padding: 1.1rem 2.8rem;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: var(--gold);
+            transform: scale(1.05);
+        }
+        
+        section {
+            padding: 5rem 5%;
+        }
+        
+        .services {
+            background: var(--choco);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: #3F2E24;
+            padding: 2.2rem;
+            border-radius: 16px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .vision {
+            background: linear-gradient(135deg, #3F2E24, var(--dark-brown));
+        }
+        
+        footer {
+            background: #1C140F;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        h2, h3 {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Same content as before -->
+    <header>
+        <a href="#" class="logo">Elyra</a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#vision">Vision</a>
+            <
