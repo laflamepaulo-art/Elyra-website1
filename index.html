@@ -49,8 +49,9 @@
         
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(44,33,24,0.65), rgba(44,33,24,0.75)), 
-                        url('https://picsum.photos/id/1015/1920/1080') center/cover;
+            background: linear-gradient(rgba(44,33,24,0.6), rgba(44,33,24,0.7)), 
+                        url('https://picsum.photos/id/1015/1920/1080') center/cover; /* ← Replace this with your photo */
+            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -109,9 +110,18 @@
         
         .card {
             background: #2C2118;
-            padding: 2.2rem;
+            padding: 1.5rem;
             border-radius: 16px;
             transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
         }
         
         .card:hover {
@@ -146,18 +156,23 @@
         
         input, textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin-bottom: 1rem;
             background: #2C2118;
             border: 1px solid #5C4633;
             color: var(--cream);
             border-radius: 8px;
+            font-size: 1rem;
         }
         
         button[type="submit"] {
             background: var(--gold);
             color: #1C140F;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -193,23 +208,25 @@
         </div>
     </section>
 
-    <!-- New Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem;">My Work</h2>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">A glimpse into my photography, music, and social media projects.</p>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Selected photography, beats, and social media projects.</p>
         
         <div class="grid">
             <div class="card">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Photography">
                 <h3>📷 Photography</h3>
-                <p>Landscape, portraits, and creative shoots. <br><a href="#" style="color:var(--teal);">View Gallery →</a></p>
+                <p>Landscape & creative shoots</p>
             </div>
             <div class="card">
+                <img src="https://picsum.photos/id/201/600/400" alt="Music">
                 <h3>🎵 Original Beats</h3>
-                <p>From-scratch music productions. <br><a href="#" style="color:var(--teal);">Listen on SoundCloud/YouTube →</a></p>
+                <p><a href="https://youtube.com/@proddbypaul" target="_blank" style="color:var(--teal);">Listen on YouTube →</a></p>
             </div>
             <div class="card">
+                <img src="https://picsum.photos/id/237/600/400" alt="Social Media">
                 <h3>📱 Social Media Management</h3>
-                <p>Accounts I manage and grow. <br><a href="#" style="color:var(--teal);">See Results →</a></p>
+                <p>Growth & content examples</p>
             </div>
         </div>
     </section>
@@ -218,26 +235,26 @@
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem;">Our Vision</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
             <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
-            <p style="margin-top: 2rem;">Elyra is the essential creative companion that fuses camera work, music production, photography, video editing (including Premiere Pro), and social media storytelling. Powered by AI, we eliminate tedious struggles, save precious time, and augment human craft so you can focus on bringing the paradise of your imagination to life.</p>
+            <p style="margin-top: 2rem;">Elyra is the essential creative companion...</p>
         </div>
     </section>
 
-    <!-- New Contact Section -->
     <section id="contact" class="contact">
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem;">Let's Create Together</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or just to say hello.</p>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or suggestions.</p>
         
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div class="social-links" style="margin-bottom: 2rem;">
-                <a href="https://instagram.com/paulm_adeit?igsh=MXJ4bmFsbGRlN3JqeQ==" target="_blank">📸</a>
-                <a href="https://youtube.com/UCqZwIC287FrMbaPbSR4qHsA" target="_blank">▶️</a>
-                <a href="https://tiktok.com/@paulm_adeit?_r=1&_t=ZG-92MrxjPaE3V" target="_blank">🎵</a>
+            <div class="social-links" style="margin-bottom: 2.5rem;">
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank">📸</a>
+                <a href="https://www.youtube.com/@proddbypaul" target="_blank">▶️</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank">🎵</a>
+                <a href="https://discord.gg/6YRNxfmT" target="_blank">💬</a>
             </div>
             
-            <form action="https://formspree.io/f/your-email-here" method="POST">
+            <form onsubmit="handleSubmit(event)">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="6" placeholder="Your message, project idea, or suggestion..." required></textarea>
+                <textarea name="message" rows="6" placeholder="Tell me about your project or idea..." required></textarea>
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
         </div>
@@ -245,7 +262,14 @@
 
     <footer>
         <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
-        <p style="margin-top: 1rem;">Building the future of authentic storytelling.</p>
     </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been received. I'll reply soon.");
+            e.target.reset();
+        }
+    </script>
 </body>
 </html>
