@@ -24,32 +24,18 @@
         
         header {
             background: rgba(31, 26, 20, 0.98);
-            padding: 1rem 5%;
+            padding: 1.2rem 5%;
             position: sticky;
             top: 0;
             z-index: 100;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .logo-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--gold);
         }
         
         .logo {
             font-family: 'Georgia', 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.9rem;
             font-weight: 700;
             letter-spacing: -2px;
             background: linear-gradient(90deg, #E8B923, #F4D38A, #E8B923);
@@ -58,7 +44,6 @@
         }
         
         nav {
-            margin-left: auto;
             display: flex;
             gap: 2rem;
         }
@@ -93,16 +78,65 @@
             transition: opacity 2s ease-in-out;
             z-index: 1;
         }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 5.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+        }
+        
+        .hero .slogan {
+            font-size: 2.4rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-family: 'Georgia', serif;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+        }
+        
+        section {
+            padding: 5rem 5%;
+        }
+        
+        .services, .portfolio, .vision, .contact {
+            background: var(--choco);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: #2C2118;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: #1F1A14;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <!-- Replace this link with your actual logo icon -->
-            <img src="https://i.imgur.com/eb7wnpt.jpg" alt="Elyra Icon" class="logo-icon">
-            <a href="#" class="logo">Elyra</a>
-        </div>
-        
+        <a href="#" class="logo">Elyra</a>
         <nav>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
@@ -128,7 +162,69 @@
         </div>
     </section>
 
-    <!-- Services, Portfolio, Vision, Contact sections... (copy from your previous full code) -->
+    <section id="services" class="services">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">Your Creative Sanctuary</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">AI-powered services for camera work, music production, photography, Premiere Pro editing, and social media storytelling.</p>
+        
+        <div class="grid">
+            <div class="card"><h3>📸 Camera & Photography</h3><p>Professional capture, RAW processing, and AI enhancements.</p></div>
+            <div class="card"><h3>🎵 Music Production</h3><p>From-scratch beats and original sound design.</p></div>
+            <div class="card"><h3>🎬 Premiere Pro Editing</h3><p>Seamless video editing with AI assistance.</p></div>
+            <div class="card"><h3>📱 Social Media Mastery</h3><p>Content creation and account management.</p></div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">My Work</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Selected photography, beats, and social media projects.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>📷 Photography</h3>
+                <p>Landscape, portraits & creative shoots</p>
+            </div>
+            <div class="card">
+                <h3>🎵 Original Beats</h3>
+                <p><a href="https://youtube.com/@proddbypaul" target="_blank" style="color:var(--gold);">Listen on YouTube →</a></p>
+            </div>
+            <div class="card">
+                <h3>📱 Social Media Management</h3>
+                <p>Accounts I manage and grow</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="vision">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem; color: var(--gold);">Our Vision</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+            <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
+            <p style="margin-top: 2rem;">Elyra is the essential creative companion that fuses camera work, music production, photography, video editing, and social media storytelling.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">Let's Create Together</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or suggestions.</p>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div style="margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">📷</a>
+                <a href="https://www.youtube.com/@proddbypaul" target="_blank" style="font-size:2.5rem; margin:0 15px;">▶️</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">♬</a>
+                <a href="https://discord.gg/6YRNxfmT" target="_blank" style="font-size:2.5rem; margin:0 15px;">💬</a>
+            </div>
+            
+            <p style="font-size: 1.4rem; margin: 2rem 0;">
+                📞 Phone: 
+                <a href="tel:+254792099527" style="color:var(--gold);">Call Me</a> | 
+                <a href="https://wa.me/254792099527" target="_blank" style="color:var(--gold);">WhatsApp Me</a>
+            </p>
+        </div>
+    </section>
+
+    <footer style="background:#1A140F; padding: 3rem 5%; text-align:center;">
+        <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
+    </footer>
 
     <script>
         let current = 0;
