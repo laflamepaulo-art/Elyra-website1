@@ -6,21 +6,32 @@
     <title>Elyra — Creative Paradise</title>
     <style>
         :root {
-            --bg: #F8F4ED;
-            --card: #F0E6D9;
-            --dark: #3C2F25;
-            --gold: #D4A017;
-            --teal: #2EC4B6;
-            --accent: #FF9F6B;
+            --dark: #1F1A14;
+            --choco: #2C2118;
+            --cream: #F5EDE4;
+            --gold: #E8B923;
+            --teal: #00D4B8;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--dark);
+            background: var(--dark);
+            color: var(--cream);
             line-height: 1.7;
+        }
+        
+        header {
+            background: rgba(31, 26, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
@@ -28,9 +39,25 @@
             font-size: 2.9rem;
             font-weight: 700;
             letter-spacing: -2px;
-            background: linear-gradient(90deg, #D4A017, #E8C46A, #D4A017);
+            background: linear-gradient(90deg, #E8B923, #F4D38A, #E8B923);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
         }
         
         .hero {
@@ -63,7 +90,7 @@
         .hero h1 {
             font-size: 5.2rem;
             margin-bottom: 1rem;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
         }
         
         .hero .slogan {
@@ -71,7 +98,29 @@
             color: var(--gold);
             margin-bottom: 2rem;
             font-family: 'Georgia', serif;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+        }
+        
+        section {
+            padding: 5rem 5%;
+        }
+        
+        .services, .portfolio, .contact {
+            background: var(--choco);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: #2C2118;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
         }
     </style>
 </head>
@@ -87,7 +136,6 @@
     </header>
 
     <section class="hero">
-        <!-- Your own photos as slideshow -->
         <div class="hero-bg" id="bg1" style="background-image: url('https://i.imgur.com/eb7wnpt.jpg'); opacity: 1;"></div>
         <div class="hero-bg" id="bg2" style="background-image: url('https://i.imgur.com/X5PJtko.jpg'); opacity: 0;"></div>
         <div class="hero-bg" id="bg3" style="background-image: url('https://i.imgur.com/AzK2tYf.jpg'); opacity: 0;"></div>
@@ -98,37 +146,59 @@
             <p class="slogan">Creative Paradise</p>
             <p style="font-size: 1.4rem; margin-bottom: 2rem;">Where lens meets lyre.<br>Raw ideas become resonant stories.</p>
             <button onclick="alert('Welcome to Elyra — Creative Paradise! 🚀')" 
-                    style="background:var(--teal); color:white; padding:1.2rem 3rem; font-size:1.3rem; border:none; border-radius:50px; cursor:pointer;">
+                    style="background:var(--teal); color:#1F1A14; padding:1.2rem 3rem; font-size:1.3rem; border:none; border-radius:50px; cursor:pointer; font-weight:600;">
                 Enter Your Paradise
             </button>
         </div>
     </section>
 
-    <section id="services" class="services" style="background: var(--card);">
-        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem;">Your Creative Sanctuary</h2>
+    <section id="services" class="services">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">Your Creative Sanctuary</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">AI-powered services for camera work, music production, photography, Premiere Pro editing, and social media storytelling.</p>
         
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; padding: 0 5%;">
-            <div class="card" style="background: white; padding: 1.8rem; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center;">
-                <h3>📸 Camera & Photography</h3><p>Professional capture, RAW processing, and AI enhancements.</p>
-            </div>
-            <div class="card" style="background: white; padding: 1.8rem; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center;">
-                <h3>🎵 Music Production</h3><p>From-scratch beats and original sound design.</p>
-            </div>
-            <div class="card" style="background: white; padding: 1.8rem; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center;">
-                <h3>🎬 Premiere Pro Editing</h3><p>Seamless video editing with AI assistance.</p>
-            </div>
-            <div class="card" style="background: white; padding: 1.8rem; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); text-align: center;">
-                <h3>📱 Social Media Mastery</h3><p>Content creation and account management.</p>
-            </div>
+        <div class="grid">
+            <div class="card"><h3>📸 Camera & Photography</h3><p>Professional capture, RAW processing, and AI enhancements.</p></div>
+            <div class="card"><h3>🎵 Music Production</h3><p>From-scratch beats and original sound design.</p></div>
+            <div class="card"><h3>🎬 Premiere Pro Editing</h3><p>Seamless video editing with AI assistance.</p></div>
+            <div class="card"><h3>📱 Social Media Mastery</h3><p>Content creation and account management.</p></div>
         </div>
     </section>
 
-    <!-- Portfolio, Vision, Contact sections remain the same as previous version -->
-    <!-- You can keep adding them from the last full code I gave you -->
+    <section id="portfolio" class="portfolio" style="background: var(--choco);">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">My Work</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Selected photography, beats, and social media projects.</p>
+        <!-- Add your portfolio cards here if needed -->
+    </section>
+
+    <section id="vision" class="vision" style="background: var(--choco);">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem; color: var(--gold);">Our Vision</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+            <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" style="background: var(--choco);">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">Let's Create Together</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or suggestions.</p>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div style="margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">📸</a>
+                <a href="https://www.youtube.com/@proddbypaul" target="_blank" style="font-size:2.5rem; margin:0 15px;">▶️</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">🎵</a>
+                <a href="https://discord.gg/6YRNxfmT" target="_blank" style="font-size:2.5rem; margin:0 15px;">💬</a>
+            </div>
+            <p style="font-size: 1.3rem;">
+                📞 <a href="tel:+254792099527" style="color:var(--gold);">+254 792 099 527</a>
+            </p>
+        </div>
+    </section>
+
+    <footer style="background:#1A140F; padding: 3rem 5%; text-align:center;">
+        <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
+    </footer>
 
     <script>
-        // Beautiful fading slideshow with your photos
         let current = 0;
         const backgrounds = document.querySelectorAll('.hero-bg');
         
@@ -138,7 +208,7 @@
             backgrounds[current].style.opacity = 1;
         }
         
-        setInterval(changeBackground, 6500); // Change every 6.5 seconds
+        setInterval(changeBackground, 6500);
     </script>
 </body>
 </html>
