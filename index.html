@@ -24,7 +24,6 @@
         
         header {
             background: rgba(31, 26, 20, 0.98);
-            backdrop-filter: blur(10px);
             padding: 1.2rem 5%;
             position: sticky;
             top: 0;
@@ -122,6 +121,17 @@
             border-radius: 16px;
             text-align: center;
         }
+        
+        .contact-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: #1F1A14;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -198,13 +208,16 @@
         
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
             <div style="margin-bottom: 2rem;">
-                <a href="https://www.instagram.com/paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">📸</a>
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">📷</a>
                 <a href="https://www.youtube.com/@proddbypaul" target="_blank" style="font-size:2.5rem; margin:0 15px;">▶️</a>
-                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">🎵</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">♬</a>
                 <a href="https://discord.gg/6YRNxfmT" target="_blank" style="font-size:2.5rem; margin:0 15px;">💬</a>
             </div>
-            <p style="font-size: 1.3rem;">
-                📞 <a href="tel:+254792099527" style="color:var(--gold);">+254 792 099 527</a>
+            
+            <p style="font-size: 1.4rem; margin: 2rem 0;">
+                📞 Phone: 
+                <a href="tel:+254792099527" style="color:var(--gold);">Call Me</a> | 
+                <a href="https://wa.me/254792099527" target="_blank" style="color:var(--gold);">WhatsApp Me</a>
             </p>
         </div>
     </section>
@@ -214,7 +227,6 @@
     </footer>
 
     <script>
-        // Slideshow
         let current = 0;
         const backgrounds = document.querySelectorAll('.hero-bg');
         
