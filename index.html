@@ -6,43 +6,49 @@
     <title>Elyra — Creative Paradise</title>
     <style>
         :root {
-            --dark-brown: #2A1F18;     
-            --choco: #3F2A22;          
-            --cream: #F8F1E9;          
-            --gold: #F4C95D;           
-            --teal: #00D4B8;           
-            --accent: #FF9F4D;         /* Extra warm orange accent */
+            --bg: #F8F4ED;           /* Soft warm beige */
+            --card: #F0E6D9;          /* Light warm card */
+            --dark: #3C2F25;          /* Deep warm brown for text */
+            --gold: #D4A017;          /* Warm elegant gold */
+            --teal: #2EC4B6;          /* Soothing teal */
+            --accent: #FF9F6B;        /* Soft coral accent */
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
-            background: var(--dark-brown);
-            color: var(--cream);
-            line-height: 1.6;
+            background: var(--bg);
+            color: var(--dark);
+            line-height: 1.7;
         }
         
         header {
-            background: linear-gradient(rgba(42,31,24,0.95), rgba(42,31,24,0.95));
-            padding: 1rem 5%;
+            background: rgba(248, 244, 237, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
             position: sticky;
             top: 0;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         
         .logo {
-            font-size: 2.3rem;
+            font-family: 'Georgia', 'Playfair Display', serif;
+            font-size: 2.9rem;
             font-weight: 700;
-            color: var(--gold);
-            text-decoration: none;
+            letter-spacing: -2px;
+            background: linear-gradient(90deg, #D4A017, #E8C46A, #D4A017);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(212, 160, 23, 0.3);
         }
         
         nav a {
-            color: var(--cream);
+            color: var(--dark);
             margin-left: 2rem;
             text-decoration: none;
             font-weight: 500;
@@ -50,12 +56,13 @@
         
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(42,31,24,0.55), rgba(42,31,24,0.65)), 
+            background: linear-gradient(rgba(60,47,37,0.35), rgba(60,47,37,0.45)), 
                         url('https://picsum.photos/id/1015/1920/1080') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            color: white;
         }
         
         .hero-content {
@@ -64,20 +71,20 @@
         }
         
         .hero h1 {
-            font-size: 5rem;
+            font-size: 5.2rem;
             margin-bottom: 1rem;
-            color: white;
         }
         
         .hero .slogan {
             font-size: 2.4rem;
             color: var(--gold);
             margin-bottom: 2rem;
+            font-family: 'Georgia', serif;
         }
         
         .cta-button {
             background: var(--teal);
-            color: #1C140F;
+            color: white;
             padding: 1.2rem 3rem;
             font-size: 1.3rem;
             border: none;
@@ -97,7 +104,7 @@
         }
         
         .services, .portfolio, .contact {
-            background: var(--choco);
+            background: var(--card);
         }
         
         .grid {
@@ -108,9 +115,10 @@
         }
         
         .card {
-            background: #2A1F18;
-            padding: 1.5rem;
-            border-radius: 16px;
+            background: white;
+            padding: 1.8rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
             transition: transform 0.3s;
             text-align: center;
         }
@@ -119,20 +127,20 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 16px;
             margin-bottom: 1rem;
         }
         
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
         }
         
         h2, h3 {
-            color: var(--gold);
+            color: var(--dark);
         }
 
         .social-links a {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             margin: 0 18px;
             text-decoration: none;
             transition: transform 0.3s;
@@ -151,16 +159,16 @@
             width: 100%;
             padding: 14px;
             margin-bottom: 1rem;
-            background: #2A1F18;
-            border: 1px solid #5C4633;
-            color: var(--cream);
-            border-radius: 8px;
+            background: white;
+            border: 1px solid #D4C4B0;
+            color: var(--dark);
+            border-radius: 12px;
             font-size: 1rem;
         }
         
         button[type="submit"] {
             background: var(--gold);
-            color: #1C140F;
+            color: white;
             padding: 1rem 2.5rem;
             font-size: 1.1rem;
             border: none;
@@ -237,12 +245,16 @@
         <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or suggestions.</p>
         
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div class="social-links" style="margin-bottom: 2.5rem;">
-                <a href="https://www.instagram.com/paulm_adeit" target="_blank" title="Instagram">📸</a>
-                <a href="https://www.youtube.com/@proddbypaul" target="_blank" title="YouTube">▶️</a>
-                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" title="TikTok">🎵</a>
-                <a href="https://discord.gg/6YRNxfmT" target="_blank" title="Discord">💬</a>
+            <div class="social-links" style="margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank">📸</a>
+                <a href="https://www.youtube.com/@proddbypaul" target="_blank">▶️</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank">🎵</a>
+                <a href="https://discord.gg/6YRNxfmT" target="_blank">💬</a>
             </div>
+            
+            <p style="font-size: 1.3rem; margin: 1.5rem 0;">
+                📞 <a href="tel:+254792099527" style="color:var(--gold); text-decoration:none;">+254 792 099 527</a>
+            </p>
             
             <form onsubmit="handleSubmit(event)">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -253,14 +265,14 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="background: #3C2F25; color: #F8F4ED; padding: 3rem 5%; text-align: center;">
         <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
     </footer>
 
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            alert("Thank you! Your message has been received. I'll reply soon.");
+            alert("✅ Thank you! Your message has been received.\n\nI'll reply soon via WhatsApp or call on +254 792 099 527.");
             e.target.reset();
         }
     </script>
