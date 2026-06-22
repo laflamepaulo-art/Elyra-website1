@@ -229,4 +229,40 @@
         <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
             <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
             <p style="margin-top: 2rem;">Elyra is the essential creative companion that fuses camera work, music production, photography, video editing, and social media storytelling.</p>
-        </
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem;">Let's Create Together</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or suggestions.</p>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="social-links" style="margin-bottom: 2.5rem;">
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank" title="Instagram">📸</a>
+                <a href="https://www.youtube.com/@proddbypaul" target="_blank" title="YouTube">▶️</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" title="TikTok">🎵</a>
+                <a href="https://discord.gg/6YRNxfmT" target="_blank" title="Discord">💬</a>
+            </div>
+            
+            <form onsubmit="handleSubmit(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="6" placeholder="Tell me about your project or idea..." required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Elyra — Creative Paradise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been received. I'll reply soon.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
