@@ -40,8 +40,11 @@
         }
         
         .logo-icon {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
         }
         
         .logo {
@@ -70,13 +73,33 @@
         nav a:hover {
             color: var(--gold);
         }
+        
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 2s ease-in-out;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <!-- Logo Icon (using one of the clean versions) -->
-            <img src="https://i.imgur.com/eb7wnpt.jpg" alt="Elyra Logo" class="logo-icon" style="border-radius: 50%; object-fit: cover;">
+            <!-- Replace this link with your actual logo icon -->
+            <img src="https://i.imgur.com/eb7wnpt.jpg" alt="Elyra Icon" class="logo-icon">
             <a href="#" class="logo">Elyra</a>
         </div>
         
@@ -88,11 +111,26 @@
         </nav>
     </header>
 
-    <!-- Rest of your sections (hero, services, etc.) remain the same -->
-    <!-- ... paste the rest of your previous sections here ... -->
+    <section class="hero">
+        <div class="hero-bg" id="bg1" style="background-image: url('https://i.imgur.com/eb7wnpt.jpg'); opacity: 1;"></div>
+        <div class="hero-bg" id="bg2" style="background-image: url('https://i.imgur.com/X5PJtko.jpg'); opacity: 0;"></div>
+        <div class="hero-bg" id="bg3" style="background-image: url('https://i.imgur.com/AzK2tYf.jpg'); opacity: 0;"></div>
+        <div class="hero-bg" id="bg4" style="background-image: url('https://i.imgur.com/h6MBbWR.jpg'); opacity: 0;"></div>
+        
+        <div class="hero-content">
+            <h1>Elyra</h1>
+            <p class="slogan">Creative Paradise</p>
+            <p style="font-size: 1.4rem; margin-bottom: 2rem;">Where lens meets lyre.<br>Raw ideas become resonant stories.</p>
+            <button onclick="alert('Welcome to Elyra — Creative Paradise! 🚀')" 
+                    style="background:var(--teal); color:#1F1A14; padding:1.2rem 3rem; font-size:1.3rem; border:none; border-radius:50px; cursor:pointer; font-weight:600;">
+                Enter Your Paradise
+            </button>
+        </div>
+    </section>
+
+    <!-- Services, Portfolio, Vision, Contact sections... (copy from your previous full code) -->
 
     <script>
-        // Slideshow code remains the same
         let current = 0;
         const backgrounds = document.querySelectorAll('.hero-bg');
         
