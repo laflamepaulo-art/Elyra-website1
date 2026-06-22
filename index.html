@@ -29,13 +29,27 @@
             top: 0;
             z-index: 100;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
         }
         
         .logo {
             font-family: 'Georgia', 'Playfair Display', serif;
-            font-size: 2.9rem;
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -2px;
             background: linear-gradient(90deg, #E8B923, #F4D38A, #E8B923);
@@ -43,16 +57,11 @@
             -webkit-text-fill-color: transparent;
         }
         
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-        
         nav a {
             color: var(--cream);
             text-decoration: none;
             font-weight: 500;
-            font-size: 1.1rem;
+            margin-left: 2rem;
         }
         
         nav a:hover {
@@ -121,22 +130,14 @@
             border-radius: 16px;
             text-align: center;
         }
-        
-        .contact-btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 24px;
-            background: var(--gold);
-            color: #1F1A14;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-        }
     </style>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Elyra</a>
+        <div class="logo-container">
+            <img src="https://i.imgur.com/eb7wnpt.jpg" alt="Elyra" class="logo-icon">
+            <a href="#" class="logo">Elyra</a>
+        </div>
         <nav>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
@@ -146,6 +147,7 @@
     </header>
 
     <section class="hero">
+        <!-- Your 4 photos as background slideshow -->
         <div class="hero-bg" id="bg1" style="background-image: url('https://i.imgur.com/eb7wnpt.jpg'); opacity: 1;"></div>
         <div class="hero-bg" id="bg2" style="background-image: url('https://i.imgur.com/X5PJtko.jpg'); opacity: 0;"></div>
         <div class="hero-bg" id="bg3" style="background-image: url('https://i.imgur.com/AzK2tYf.jpg'); opacity: 0;"></div>
@@ -177,20 +179,10 @@
     <section id="portfolio" class="portfolio">
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">My Work</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Selected photography, beats, and social media projects.</p>
-        
         <div class="grid">
-            <div class="card">
-                <h3>📷 Photography</h3>
-                <p>Landscape, portraits & creative shoots</p>
-            </div>
-            <div class="card">
-                <h3>🎵 Original Beats</h3>
-                <p><a href="https://youtube.com/@proddbypaul" target="_blank" style="color:var(--gold);">Listen on YouTube →</a></p>
-            </div>
-            <div class="card">
-                <h3>📱 Social Media Management</h3>
-                <p>Accounts I manage and grow</p>
-            </div>
+            <div class="card"><h3>📷 Photography</h3><p>Landscape, portraits & creative shoots</p></div>
+            <div class="card"><h3>🎵 Original Beats</h3><p><a href="https://youtube.com/@proddbypaul" target="_blank" style="color:var(--gold);">Listen on YouTube →</a></p></div>
+            <div class="card"><h3>📱 Social Media Management</h3><p>Accounts I manage and grow</p></div>
         </div>
     </section>
 
@@ -208,15 +200,13 @@
         
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
             <div style="margin-bottom: 2rem;">
-                <a href="https://www.instagram.com/paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">📷</a>
-                <a href="https://www.youtube.com/@proddbypaul" target="_blank" style="font-size:2.5rem; margin:0 15px;">▶️</a>
-                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" style="font-size:2.5rem; margin:0 15px;">♬</a>
-                <a href="https://discord.gg/6YRNxfmT" target="_blank" style="font-size:2.5rem; margin:0 15px;">💬</a>
+                <a href="https://www.instagram.com/paulm_adeit" target="_blank" style="font-size:2.6rem; margin:0 18px;">📷</a>
+                <a href="https://www.youtube.com/@proddbypaul" target="_blank" style="font-size:2.6rem; margin:0 18px;">▶️</a>
+                <a href="https://www.tiktok.com/@paulm_adeit" target="_blank" style="font-size:2.6rem; margin:0 18px;">♬</a>
+                <a href="https://discord.gg/6YRNxfmT" target="_blank" style="font-size:2.6rem; margin:0 18px;">💬</a>
             </div>
-            
-            <p style="font-size: 1.4rem; margin: 2rem 0;">
-                📞 Phone: 
-                <a href="tel:+254792099527" style="color:var(--gold);">Call Me</a> | 
+            <p style="font-size: 1.4rem;">
+                📞 <a href="tel:+254792099527" style="color:var(--gold);">Call Me</a> | 
                 <a href="https://wa.me/254792099527" target="_blank" style="color:var(--gold);">WhatsApp Me</a>
             </p>
         </div>
