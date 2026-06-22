@@ -23,7 +23,7 @@
         }
         
         header {
-            background: rgba(31, 26, 20, 0.95);
+            background: rgba(31, 26, 20, 0.98);
             backdrop-filter: blur(10px);
             padding: 1.2rem 5%;
             position: sticky;
@@ -105,7 +105,7 @@
             padding: 5rem 5%;
         }
         
-        .services, .portfolio, .contact {
+        .services, .portfolio, .vision, .contact {
             background: var(--choco);
         }
         
@@ -164,20 +164,35 @@
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio" style="background: var(--choco);">
+    <section id="portfolio" class="portfolio">
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">My Work</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Selected photography, beats, and social media projects.</p>
-        <!-- Add your portfolio cards here if needed -->
-    </section>
-
-    <section id="vision" class="vision" style="background: var(--choco);">
-        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem; color: var(--gold);">Our Vision</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
-            <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>📷 Photography</h3>
+                <p>Landscape, portraits & creative shoots</p>
+            </div>
+            <div class="card">
+                <h3>🎵 Original Beats</h3>
+                <p><a href="https://youtube.com/@proddbypaul" target="_blank" style="color:var(--gold);">Listen on YouTube →</a></p>
+            </div>
+            <div class="card">
+                <h3>📱 Social Media Management</h3>
+                <p>Accounts I manage and grow</p>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact" style="background: var(--choco);">
+    <section id="vision" class="vision">
+        <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 2rem; color: var(--gold);">Our Vision</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.25rem;">
+            <p>A world where every photographer, videographer, and music producer lives in their own Elysium — a seamless creative paradise where raw ideas flow effortlessly into reality.</p>
+            <p style="margin-top: 2rem;">Elyra is the essential creative companion that fuses camera work, music production, photography, video editing, and social media storytelling.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">Let's Create Together</h2>
         <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Reach out for collaborations, projects, or suggestions.</p>
         
@@ -199,6 +214,7 @@
     </footer>
 
     <script>
+        // Slideshow
         let current = 0;
         const backgrounds = document.querySelectorAll('.hero-bg');
         
