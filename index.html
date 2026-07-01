@@ -30,7 +30,7 @@
             z-index: 100;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 1rem;
         }
         
         .logo-container {
@@ -57,11 +57,17 @@
             -webkit-text-fill-color: transparent;
         }
         
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 2rem;
+        }
+        
         nav a {
             color: var(--cream);
             text-decoration: none;
             font-weight: 500;
-            margin-left: 2rem;
+            font-size: 1.1rem;
         }
         
         nav a:hover {
@@ -87,57 +93,16 @@
             transition: opacity 2s ease-in-out;
             z-index: 1;
         }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 5.2rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
-        }
-        
-        .hero .slogan {
-            font-size: 2.4rem;
-            color: var(--gold);
-            margin-bottom: 2rem;
-            font-family: 'Georgia', serif;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.7);
-        }
-        
-        section {
-            padding: 5rem 5%;
-        }
-        
-        .services, .portfolio, .vision, .contact {
-            background: var(--choco);
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .card {
-            background: #2C2118;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="https://i.imgur.com/eb7wnpt.jpg" alt="Elyra" class="logo-icon">
+            <!-- Replace this link with your actual logo icon -->
+            <img src="https://via.placeholder.com/52" alt="Elyra Icon" class="logo-icon">
             <a href="#" class="logo">Elyra</a>
         </div>
+        
         <nav>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
@@ -179,6 +144,7 @@
     <section id="portfolio" class="portfolio">
         <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 1rem; color: var(--gold);">My Work</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Selected photography, beats, and social media projects.</p>
+        
         <div class="grid">
             <div class="card"><h3>📷 Photography</h3><p>Landscape, portraits & creative shoots</p></div>
             <div class="card"><h3>🎵 Original Beats</h3><p><a href="https://youtube.com/@proddbypaul" target="_blank" style="color:var(--gold);">Listen on YouTube →</a></p></div>
